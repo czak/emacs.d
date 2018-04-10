@@ -49,6 +49,10 @@
   (global-set-key (kbd "C-c C-g") 'counsel-git)
   (global-set-key (kbd "C-c C-f") 'counsel-rg))
 
+(use-package diff-hl
+  :ensure t
+  :config (global-diff-hl-mode))
+
 ;; Store Custom setting separately
 (setq custom-file (expand-file-name "custom.el" user-emacs-directory))
 (when (file-exists-p custom-file)
