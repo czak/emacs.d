@@ -7,6 +7,11 @@
 
 (setq ring-bell-function 'ignore)
 (setq inhibit-startup-screen t)
+(setq require-final-newline t)
+
+;; Mode-specific settings
+
+(setq ruby-insert-encoding-magic-comment nil)
 
 ;; Packages
 
