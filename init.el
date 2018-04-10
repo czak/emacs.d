@@ -41,9 +41,6 @@
   (ivy-mode 1)
   (setq ivy-use-virtual-buffers t)
   (setq ivy-count-format "(%d/%d) ")
-  (setq ivy-re-builders-alist
-	'((counsel-git . ivy--regex-fuzzy)
-	  (t . ivy--regex-plus)))
   (global-set-key (kbd "C-c C-r") 'ivy-resume))
 
 (use-package counsel
