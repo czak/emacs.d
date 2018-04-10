@@ -33,7 +33,16 @@
 (use-package ivy
   :ensure t
   :config
-  (ivy-mode 1))
+  (ivy-mode 1)
+  (setq ivy-use-virtual-buffers t)
+  (setq ivy-count-format "(%d/%d) ")
+  (global-set-key (kbd "C-c C-r") 'ivy-resume))
+
+(use-package counsel
+  :ensure t
+  :config
+  (global-set-key (kbd "C-c C-g") 'counsel-git)
+  (global-set-key (kbd "C-c C-f") 'counsel-rg))
 
 ;; Store Custom setting separately
 (setq custom-file (expand-file-name "custom.el" user-emacs-directory))
