@@ -26,6 +26,14 @@
 (use-package magit
   :ensure t)
 
+(use-package try
+  :ensure t)
+
+(use-package ivy
+  :ensure t
+  :config
+  (ivy-mode 1))
+
 ;; Store Custom setting separately
 (setq custom-file (expand-file-name "custom.el" user-emacs-directory))
 (when (file-exists-p custom-file)
