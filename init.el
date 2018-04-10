@@ -30,7 +30,9 @@
 
 (use-package magit
   :ensure t
-  :bind (("C-x g" . magit-status)))
+  :bind (("C-x g" . magit-status))
+  :config
+  (add-hook 'magit-post-refresh-hook 'diff-hl-magit-post-refresh))
 
 (use-package try
   :ensure t)
