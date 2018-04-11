@@ -43,10 +43,12 @@
 
 (use-package ivy
   :ensure t
-  :config
-  (ivy-mode 1)
+  :init
+  (setq ivy-height 15)
   (setq ivy-use-virtual-buffers t)
   (setq ivy-count-format "(%d/%d) ")
+  :config
+  (ivy-mode 1)
   (global-set-key (kbd "C-c C-r") 'ivy-resume))
 
 (use-package counsel
