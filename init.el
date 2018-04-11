@@ -9,6 +9,10 @@
 (setq inhibit-startup-screen t)
 (setq require-final-newline t)
 
+(tool-bar-mode -1)
+(scroll-bar-mode -1)
+(menu-bar-mode -1)
+
 ;; Mode-specific settings
 
 (setq ruby-insert-encoding-magic-comment nil)
