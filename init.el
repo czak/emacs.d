@@ -69,6 +69,9 @@
   (global-set-key (kbd "M-o M-l") 'windmove-right)
   (global-set-key (kbd "M-o M-o") 'other-window))
 
+(use-package slim-mode
+  :ensure t)
+
 ;; Store Custom setting separately
 (setq custom-file (expand-file-name "custom.el" user-emacs-directory))
 (when (file-exists-p custom-file)
