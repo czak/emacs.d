@@ -51,6 +51,11 @@
   (global-set-key (kbd "C-c C-g") 'counsel-git)
   (global-set-key (kbd "C-c C-f") 'counsel-rg))
 
+(use-package swiper
+  :ensure t
+  :config
+  (global-set-key "\C-s" 'swiper))
+
 (use-package diff-hl
   :ensure t
   :config (global-diff-hl-mode))
