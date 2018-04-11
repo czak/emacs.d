@@ -60,6 +60,14 @@
   :ensure t
   :config (global-diff-hl-mode))
 
+(use-package windmove
+  :ensure t
+  :config
+  (global-set-key (kbd "M-o M-h") 'windmove-left)
+  (global-set-key (kbd "M-o M-j") 'windmove-down)
+  (global-set-key (kbd "M-o M-k") 'windmove-up)
+  (global-set-key (kbd "M-o M-l") 'windmove-right))
+
 ;; Store Custom setting separately
 (setq custom-file (expand-file-name "custom.el" user-emacs-directory))
 (when (file-exists-p custom-file)
