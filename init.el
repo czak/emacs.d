@@ -14,6 +14,8 @@
 (menu-bar-mode -1)
 (tooltip-mode -1)
 
+(delete-selection-mode)
+
 ;; Focus newly split window
 
 (global-set-key "\C-x2" (lambda () (interactive)(split-window-vertically) (other-window 1)))
