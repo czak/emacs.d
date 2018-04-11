@@ -81,6 +81,11 @@
   (global-set-key (kbd "M-o M-l") 'windmove-right)
   (global-set-key (kbd "M-o M-o") 'other-window))
 
+(use-package flycheck
+  :ensure t
+  :config
+  (global-flycheck-mode))
+
 (use-package slim-mode
   :ensure t)
 
