@@ -86,13 +86,22 @@
   (global-set-key (kbd "M-o M-l") 'windmove-right)
   (global-set-key (kbd "M-o M-o") 'other-window))
 
+(use-package slim-mode
+  :ensure t)
+
+(use-package rust-mode
+  :ensure t)
+
 (use-package flycheck
   :ensure t
   :config
   (global-flycheck-mode))
 
-(use-package slim-mode
-  :ensure t)
+(use-package flycheck-rust
+  :ensure t
+  :config
+  (with-eval-after-load 'rust-mode
+    (add-hook 'flycheck-mode-hook #'flycheck-rust-setup)))
 
 ;; Store Custom setting separately
 (setq custom-file (expand-file-name "custom.el" user-emacs-directory))
