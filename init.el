@@ -19,6 +19,11 @@
 (global-set-key "\C-x2" (lambda () (interactive)(split-window-vertically) (other-window 1)))
 (global-set-key "\C-x3" (lambda () (interactive)(split-window-horizontally) (other-window 1)))
 
+;; Mouse scrolling
+
+(setq mouse-wheel-scroll-amount '(2 ((shift) . 5) ((control))))
+(setq mouse-wheel-progressive-speed nil)
+
 ;; Mode-specific settings
 
 (setq ruby-insert-encoding-magic-comment nil)
