@@ -26,6 +26,10 @@
 (setq mouse-wheel-scroll-amount '(2 ((shift) . 5) ((control))))
 (setq mouse-wheel-progressive-speed nil)
 
+(setq scroll-margin 0
+      scroll-conservatively 101
+      scroll-preserve-screen-position 1)
+
 ;; Mode-specific settings
 
 (setq ruby-insert-encoding-magic-comment nil)
