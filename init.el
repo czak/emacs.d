@@ -109,6 +109,18 @@
   (with-eval-after-load 'rust-mode
     (add-hook 'flycheck-mode-hook #'flycheck-rust-setup)))
 
+(use-package evil
+  :ensure t
+  :config
+  (evil-mode 1)
+  (evil-global-set-key 'motion "j" 'evil-next-visual-line)
+  (evil-global-set-key 'motion "k" 'evil-previous-visual-line)
+  (evil-global-set-key 'motion (kbd "C-j") (lambda () (interactive) (evil-next-visual-line 10)))
+  (evil-global-set-key 'motion (kbd "C-k") (lambda () (interactive) (evil-previous-visual-line 10))))
+
+(use-package evil-magit
+  :ensure t)
+
 ;; Store Custom setting separately
 (setq custom-file (expand-file-name "custom.el" user-emacs-directory))
 (when (file-exists-p custom-file)
