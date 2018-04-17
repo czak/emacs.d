@@ -8,6 +8,7 @@
 (setq ring-bell-function 'ignore)
 (setq inhibit-startup-screen t)
 (setq require-final-newline t)
+(setq dired-listing-switches "-al --group-directories-first")
 
 (tool-bar-mode -1)
 (scroll-bar-mode -1)
