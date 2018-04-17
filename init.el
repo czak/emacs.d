@@ -111,6 +111,12 @@
   (with-eval-after-load 'rust-mode
     (add-hook 'flycheck-mode-hook #'flycheck-rust-setup)))
 
+(use-package avy
+  :ensure t
+  :config
+  (setq avy-background t)
+  (global-set-key (kbd "C-;") 'avy-goto-word-1))
+
 ;; Store Custom setting separately
 (setq custom-file (expand-file-name "custom.el" user-emacs-directory))
 (when (file-exists-p custom-file)
