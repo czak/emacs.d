@@ -118,6 +118,9 @@
   (setq avy-background t)
   (global-set-key (kbd "C-;") 'avy-goto-word-1))
 
+(use-package treemacs
+  :ensure t)
+
 ;; Store Custom setting separately
 (setq custom-file (expand-file-name "custom.el" user-emacs-directory))
 (when (file-exists-p custom-file)
