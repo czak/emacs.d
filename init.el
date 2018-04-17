@@ -16,6 +16,7 @@
 (tooltip-mode -1)
 
 (delete-selection-mode)
+(setq indent-tabs-mode nil)
 
 ;; Focus newly split window
 
