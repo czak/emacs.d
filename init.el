@@ -119,7 +119,8 @@
   (global-set-key (kbd "C-;") 'avy-goto-word-1))
 
 (use-package treemacs
-  :ensure t)
+  :ensure t
+  :bind ("C-c p t" . treemacs-toggle))
 
 ;; Store Custom setting separately
 (setq custom-file (expand-file-name "custom.el" user-emacs-directory))
