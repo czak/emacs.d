@@ -5,10 +5,11 @@
 
 ;; Settings
 
-(setq ring-bell-function 'ignore)
-(setq inhibit-startup-screen t)
-(setq require-final-newline t)
-(setq dired-listing-switches "-al --group-directories-first")
+(setq ring-bell-function 'ignore
+      inhibit-startup-screen t
+      require-final-newline t
+      dired-listing-switches "-al --group-directories-first"
+      indent-tabs-mode nil)
 
 (tool-bar-mode -1)
 (scroll-bar-mode -1)
@@ -16,7 +17,6 @@
 (tooltip-mode -1)
 
 (delete-selection-mode)
-(setq indent-tabs-mode nil)
 
 ;; Focus newly split window
 
