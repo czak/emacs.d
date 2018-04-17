@@ -32,10 +32,6 @@
       scroll-conservatively 101
       scroll-preserve-screen-position 1)
 
-;; Mode-specific settings
-
-(setq ruby-insert-encoding-magic-comment nil)
-
 ;; Packages
 
 (unless (package-installed-p 'use-package)
@@ -99,6 +95,11 @@
 
 (use-package rust-mode
   :ensure t)
+
+(use-package ruby-mode
+  :ensure t
+  :init
+  (setq ruby-insert-encoding-magic-comment nil))
 
 (use-package flycheck
   :ensure t
