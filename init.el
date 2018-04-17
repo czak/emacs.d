@@ -73,8 +73,8 @@
 (use-package counsel
   :ensure t
   :config
-  (global-set-key (kbd "C-c C-g") 'counsel-git)
-  (global-set-key (kbd "C-c C-f") 'counsel-rg))
+  (global-set-key (kbd "C-c p g") 'counsel-git)
+  (global-set-key (kbd "C-c p f") 'counsel-rg))
 
 (use-package swiper
   :ensure t
