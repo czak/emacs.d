@@ -9,7 +9,8 @@
       inhibit-startup-screen t
       require-final-newline t
       dired-listing-switches "-al --group-directories-first"
-      indent-tabs-mode nil)
+      indent-tabs-mode nil
+      browse-url-browser-function 'browse-url-chrome)
 
 (tool-bar-mode -1)
 (scroll-bar-mode -1)
