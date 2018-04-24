@@ -9,8 +9,10 @@
       inhibit-startup-screen t
       require-final-newline t
       dired-listing-switches "-al --group-directories-first"
-      indent-tabs-mode nil
+      js-indent-level 2
       browse-url-browser-function 'browse-url-chrome)
+
+(setq-default indent-tabs-mode nil)
 
 (tool-bar-mode -1)
 (scroll-bar-mode -1)
@@ -101,6 +103,9 @@
   :ensure t
   :init
   (setq ruby-insert-encoding-magic-comment nil))
+
+(use-package rjsx-mode
+  :ensure t)
 
 (use-package flycheck
   :ensure t
