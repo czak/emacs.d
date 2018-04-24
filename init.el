@@ -126,7 +126,9 @@
 
 (use-package treemacs
   :ensure t
-  :bind ("C-c p t" . treemacs-toggle))
+  :bind ("C-c p t" . treemacs-toggle)
+  :config
+  (setq treemacs-no-png-images t))
 
 ;; Store Custom setting separately
 (setq custom-file (expand-file-name "custom.el" user-emacs-directory))
