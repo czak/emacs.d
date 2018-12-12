@@ -8,9 +8,7 @@
 (setq ring-bell-function 'ignore
       inhibit-startup-screen t
       require-final-newline t
-      dired-listing-switches "-al --group-directories-first"
-      js-indent-level 2
-      browse-url-browser-function 'browse-url-chrome)
+      dired-listing-switches "-al --group-directories-first")
 
 (setq-default indent-tabs-mode nil)
 
@@ -56,33 +54,10 @@
   :config
   (add-hook 'magit-post-refresh-hook 'diff-hl-magit-post-refresh))
 
-(use-package try
-  :ensure t)
-
-(use-package ivy
-  :ensure t
-  :init
-  (setq ivy-height 15)
-  (setq ivy-use-virtual-buffers t)
-  (setq ivy-count-format "(%d/%d) ")
-  :config
-  (ivy-mode 1)
-  (global-set-key (kbd "C-c C-r") 'ivy-resume))
-
-(use-package counsel
-  :ensure t
-  :config
-  (global-set-key (kbd "C-c p g") 'counsel-git)
-  (global-set-key (kbd "C-c p f") 'counsel-rg))
-
 (use-package swiper
   :ensure t
   :config
   (global-set-key "\C-s" 'swiper))
-
-(use-package diff-hl
-  :ensure t
-  :config (global-diff-hl-mode))
 
 (use-package windmove
   :ensure t
@@ -92,43 +67,6 @@
   (global-set-key (kbd "M-o M-k") 'windmove-up)
   (global-set-key (kbd "M-o M-l") 'windmove-right)
   (global-set-key (kbd "M-o M-o") 'other-window))
-
-(use-package slim-mode
-  :ensure t)
-
-(use-package rust-mode
-  :ensure t)
-
-(use-package ruby-mode
-  :ensure t
-  :init
-  (setq ruby-insert-encoding-magic-comment nil))
-
-(use-package rjsx-mode
-  :ensure t)
-
-(use-package flycheck
-  :ensure t
-  :config
-  (global-flycheck-mode))
-
-(use-package flycheck-rust
-  :ensure t
-  :config
-  (with-eval-after-load 'rust-mode
-    (add-hook 'flycheck-mode-hook #'flycheck-rust-setup)))
-
-(use-package avy
-  :ensure t
-  :config
-  (setq avy-background t)
-  (global-set-key (kbd "C-;") 'avy-goto-word-1))
-
-(use-package treemacs
-  :ensure t
-  :bind ("C-c p t" . treemacs-toggle)
-  :config
-  (setq treemacs-no-png-images t))
 
 ;; Store Custom setting separately
 (setq custom-file (expand-file-name "custom.el" user-emacs-directory))
